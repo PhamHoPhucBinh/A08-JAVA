@@ -1,4 +1,4 @@
-package _01_introduction_java.excercise.read_number;
+package _01_introduction_java.exercise.read_number;
 
 import java.util.Scanner;
 
