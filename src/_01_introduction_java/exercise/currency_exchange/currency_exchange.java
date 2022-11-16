@@ -1,4 +1,4 @@
-package _01_introduction_java.currency_exchange;
+package _01_introduction_java.exercise.currency_exchange;
 
 import java.util.Scanner;
 public class currency_exchange {
