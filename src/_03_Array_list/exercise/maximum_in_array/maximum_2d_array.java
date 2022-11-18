@@ -1,4 +1,4 @@
-package _03_Array_list.exercise.minimum_in_array;
+package _03_Array_list.exercise.maximum_in_array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
