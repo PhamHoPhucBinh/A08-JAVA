@@ -10,7 +10,6 @@ public class currency_exchange {
         double dollar = 0;
         double vnd = 0;
         String Dollar = " ";
-        int quarter = 0;
 
 
         System.out.print("Enter the exchange rate from dollars to VND: ");
@@ -27,7 +26,7 @@ public class currency_exchange {
             dollar = key.nextDouble();
             vnd = dollar * exchangeRate;
 
-            System.out.println("$" + dollar + " is " + vnd + " VND.");
+            System.out.println("$" + dollar + " is " + " "+ vnd + " VND.");
             System.out.println();
 
         }else if(conversion == 1) {
@@ -35,13 +34,12 @@ public class currency_exchange {
             vnd = key.nextDouble();
             dollar = vnd / exchangeRate;
 
-            System.out.printf(vnd + " VND is%8.3f dollars.", dollar);
+            System.out.printf(vnd + " VND is %8.3f dollars.", dollar);
             System.out.println();
 
             Dollar = dollar + "";
-            System.out.println(Dollar.substring(0, Dollar.indexOf(".")) + " dollars");
+            int endIndex = Dollar.indexOf(".");
+            System.out.println(Dollar.substring(0, endIndex) + " dollars");
         }
-
     }
-
 }

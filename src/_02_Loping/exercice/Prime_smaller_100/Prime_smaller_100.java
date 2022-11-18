@@ -1,16 +1,18 @@
 package _02_Loping.exercice.Prime_smaller_100;
 
+import static _02_Loping.practice.is_Prime.is_Prime.isPrime;
+
 public class Prime_smaller_100 {
-    static boolean isPrime(int n) {
-        if (n <= 1)
-            return false;
-
-        for (int i = 2; i < n; i++)
-            if (n % i == 0)
-                return false;
-
-        return true;
-    }
+//    static boolean isPrime(int n) {
+//        if (n <= 1)
+//            return false;
+//
+//        for (int i = 2; i < n; i++)
+//            if (n % i == 0)
+//                return false;
+//
+//        return true;
+//    }
 
     public static void main(String[] args) {
 
@@ -19,9 +21,7 @@ public class Prime_smaller_100 {
                 if (i < 100) {
                     System.out.println(i);
                 }
-
             }
         }
     }
-
 }

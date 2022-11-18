@@ -27,7 +27,7 @@ public class is_Prime {
 //
 ////        }
 //    }
-    static boolean isPrime(int n) {
+    public static boolean isPrime(int n) {
         if (n <= 1)
             return false;
 

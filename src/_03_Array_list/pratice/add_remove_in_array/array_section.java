@@ -1,4 +1,4 @@
-package _01_introduction_java.practice.add_remove_in_array;
+package _03_Array_list.pratice.add_remove_in_array;
 
 import java.util.ArrayList;
 import java.util.Iterator;
