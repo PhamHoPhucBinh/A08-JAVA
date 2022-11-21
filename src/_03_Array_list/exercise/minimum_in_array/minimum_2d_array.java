@@ -6,12 +6,8 @@ import java.util.Arrays;
 public class minimum_2d_array {
     public static void main(String[] args) {
 
-        ArrayList<Integer[]> table = new ArrayList<>();
-        Integer[] a = {1,3,5};
-        Integer[] b = {10,30,50};
-        table.add(a);
-        table.add(b);
 
+        ArrayList<Integer[]> table = create2DArray();
         table.forEach(e -> {
             System.out.println(Arrays.toString(e));
         });
@@ -28,5 +24,14 @@ public class minimum_2d_array {
         }
 
         System.out.println("Min: " + min);
+    }
+
+    public static ArrayList<Integer[]> create2DArray(){
+        ArrayList<Integer[]> table = new ArrayList<>();
+        Integer[] a = {1,3,5};
+        Integer[] b = {10,30,50};
+        table.add(a);
+        table.add(b);
+        return table;
     }
 }
