@@ -1,4 +1,4 @@
-package _04_AccessModifier_StaticMethod.pratices.Rectangle;
+package _04_Class_and_Object.pratices.Rectangle;
 
 import java.util.Scanner;
 

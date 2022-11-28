@@ -1,4 +1,4 @@
-package _04_AccessModifier_StaticMethod.excercies.stop_watch;
+package _04_Class_and_Object.excercies.stop_watch;
 
 import java.util.Scanner;
 

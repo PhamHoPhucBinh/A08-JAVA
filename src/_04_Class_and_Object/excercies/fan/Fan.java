@@ -1,4 +1,4 @@
-package _04_AccessModifier_StaticMethod.excercies.fan;
+package _04_Class_and_Object.excercies.fan;
 
 public class Fan {
     private final int SLOW = 1;

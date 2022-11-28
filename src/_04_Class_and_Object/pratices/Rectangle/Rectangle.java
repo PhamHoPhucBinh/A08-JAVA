@@ -1,6 +1,4 @@
-package _04_AccessModifier_StaticMethod.pratices.Rectangle;
-
-import java.util.Scanner;
+package _04_Class_and_Object.pratices.Rectangle;
 
 public class Rectangle {
     double width, height;

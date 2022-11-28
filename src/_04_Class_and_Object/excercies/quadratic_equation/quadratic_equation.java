@@ -1,6 +1,4 @@
-package _04_AccessModifier_StaticMethod.excercies.quadratic_equation;
-
-import java.util.Scanner;
+package _04_Class_and_Object.excercies.quadratic_equation;
 
 public class quadratic_equation {
     private double a, b, c;

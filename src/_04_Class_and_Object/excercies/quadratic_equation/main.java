@@ -1,4 +1,4 @@
-package _04_AccessModifier_StaticMethod.excercies.quadratic_equation;
+package _04_Class_and_Object.excercies.quadratic_equation;
 
 import java.util.Scanner;
 

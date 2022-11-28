@@ -1,4 +1,4 @@
-package _04_AccessModifier_StaticMethod.pratices.StaticMethodPractice;
+package _04_Class_and_Object.pratices.StaticMethodPractice;
 
 public class Student {
     private int rollno;
