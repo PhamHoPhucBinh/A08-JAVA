@@ -43,7 +43,7 @@ public class quadratic_equation {
         if (delta < 0) {
             return 0;
         } else {
-            return (-1 * b + Math.sqrt(delta)) / 2 * a;
+            return (-1 * b - Math.sqrt(delta)) / 2 * a;
         }
     }
 }

@@ -16,7 +16,7 @@ public class main {
         if (f.getDiscriminant()>0){
             System.out.println("The equation has two solutions");
             System.out.println("nghiem 1 : " +f.getRoot1(f.getDiscriminant()));
-            System.out.println("nghiem 2 : " +f.getRoot1(f.getDiscriminant()));
+            System.out.println("nghiem 2 : " +f.getRoot2(f.getDiscriminant()));
         } else if (f.getDiscriminant()==0) {
             System.out.println("equation has double solution");
             System.out.println("double solutions is: "+ f.getRoot1(f.getDiscriminant()));
