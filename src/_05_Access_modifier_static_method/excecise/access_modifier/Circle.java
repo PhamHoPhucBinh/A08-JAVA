@@ -10,7 +10,6 @@ public class Circle {
     }
 
 
-
     Circle(double r) {
         this.radius = r;
     }
@@ -23,7 +22,8 @@ public class Circle {
         double radius = getRadius();
         return Math.PI * Math.pow(radius, 2);
 
-    }}
+    }
+}
 //
 //    public void Calculate()
 //    {
