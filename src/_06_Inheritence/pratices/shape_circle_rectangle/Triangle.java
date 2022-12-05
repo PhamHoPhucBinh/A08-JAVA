@@ -1,4 +1,4 @@
-package _06_Abstraction.pratices.shape_circle_rectangle;
+package _06_Inheritence.pratices.shape_circle_rectangle;
 
 public class Triangle extends Shape {
     private double side1 = 1.0;
@@ -39,8 +39,12 @@ public class Triangle extends Shape {
         return this.side1+this.side2+this.side3;
     }
     public double getArea(){
-        double p = this.getParameter();
-        return Math.sqrt(p*(p-this.getSide1())*(p-this.getSide2())*
+        double p = this.getParameter()/2;
+        double t = (p- side1)*(p- side2)*(p- side3);
+        double t2 = p*t;
+        double t3 = Math.sqrt(t2);
+        double t4 =Math.sqrt(p*(p-this.getSide1())*(p-this.getSide2())*
                 (p-this.getSide3()));
+        return t3;
     }
 }

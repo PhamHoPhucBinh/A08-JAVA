@@ -1,4 +1,4 @@
-package _06_Abstraction.pratices.shape_circle_rectangle;
+package _06_Inheritence.pratices.shape_circle_rectangle;
 
 public class Rectangle extends Shape {
     private double width = 1.0;

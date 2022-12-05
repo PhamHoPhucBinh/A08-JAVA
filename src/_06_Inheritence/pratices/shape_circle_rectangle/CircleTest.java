@@ -1,4 +1,4 @@
-package _06_Abstraction.pratices.shape_circle_rectangle;
+package _06_Inheritence.pratices.shape_circle_rectangle;
 
 public class CircleTest {
     public static void main(String[] args) {

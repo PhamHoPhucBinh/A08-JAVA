@@ -1,4 +1,4 @@
-package _06_Abstraction.excercies.Point2D_Point3D;
+package _06_Inheritence.excercies.Point2D_Point3D;
 
 import java.util.Arrays;
 

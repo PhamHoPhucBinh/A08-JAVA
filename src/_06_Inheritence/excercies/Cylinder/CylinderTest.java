@@ -1,4 +1,4 @@
-package _06_Abstraction.excercies.Cylinder;
+package _06_Inheritence.excercies.Cylinder;
 
 public class CylinderTest {
     public static void main(String[] args) {
