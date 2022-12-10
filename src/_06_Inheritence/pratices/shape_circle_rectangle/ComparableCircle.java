@@ -17,6 +17,10 @@ public class ComparableCircle extends Circle implements Comparable<ComparableCir
     @Override
     public int compareTo(ComparableCircle o) {
        double t = getRadius() - o.getRadius();
+       if(t  == 0)
+       {
+         return   o.getColor().compareTo(getColor());
+       }
        return t > 0? 1: -1;
     }
 }
