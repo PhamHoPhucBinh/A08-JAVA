@@ -1,5 +1,7 @@
 package _12_Java_collection_framwork.excercice;
 
+import java.util.Comparator;
+
 public class Product {
     String productID;
     String productname;

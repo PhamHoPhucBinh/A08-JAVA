@@ -5,14 +5,14 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class ProductManagement {
+public class PMLinkedList {
 
     static void display(ArrayList<Product> al) {
         System.out.println("\n--------------Product List---------------\n");
-        System.out.printf("%-10s%-15s%-10s%-20s%n", "ID","Name","Brand","amount");
+        System.out.println(String.format("%-10s%-15s%-10s%-20s", "ID","Name","Brand","amount"));
         for(Product e : al)
         {
-            System.out.printf("%-5s%-20s%-10s%-15s%n",e.productID,e.productname,e.amount,e.brand);
+            System.out.println(String.format("%-5s%-20s%-10s%-15s",e.productID,e.productname,e.amount,e.brand));
         }
     }
 
