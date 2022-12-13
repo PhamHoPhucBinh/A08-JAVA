@@ -1,12 +1,12 @@
 package _my_CaseStudy.person;
 
 public class Employee extends Person {
-    String employeeCode;
+    int employeeCode;
     String degree;
     String position;
     float salary;
 
-    public Employee(String employeeCode, String degree, String position, float salary) {
+    public Employee(int employeeCode, String degree, String position, float salary) {
         super();
         this.employeeCode = employeeCode;
         this.degree = degree;
@@ -14,11 +14,15 @@ public class Employee extends Person {
         this.salary = salary;
     }
 
-    public String getEmployeeCode() {
+    public Employee(int employeeCode, String name, String dayOfBirth, String gender, long contact, String email, String degree,String position, float salary) {
+
+    }
+
+    public int getEmployeeCode() {
         return employeeCode;
     }
 
-    public void setEmployeeCode(String employeeCode) {
+    public void setEmployeeCode(int employeeCode) {
         this.employeeCode = employeeCode;
     }
 

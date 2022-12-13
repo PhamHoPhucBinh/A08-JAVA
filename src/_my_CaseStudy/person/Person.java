@@ -17,13 +17,13 @@ import java.util.Scanner;
 
 public class Person implements Serializable {
     String name;
-    DateFormat dayOfBirth;
+    String dayOfBirth;
     String gender;
     int idNumber;
     long contact;
     String email;
 
-    public Person(String name, DateFormat dayOfBirth, String gender, int idNumber, long contact, String email) {
+    public Person(String name, String dayOfBirth, String gender, int idNumber, long contact, String email) {
         this.name = name;
         this.dayOfBirth = dayOfBirth;
         this.gender = gender;
@@ -40,11 +40,11 @@ public class Person implements Serializable {
         this.name = name;
     }
 
-    public DateFormat getDayOfBirth() {
+    public String getDayOfBirth() {
         return dayOfBirth;
     }
 
-    public void setDayOfBirth(DateFormat dayOfBirth) {
+    public void setDayOfBirth(String dayOfBirth) {
         this.dayOfBirth = dayOfBirth;
     }
 

@@ -9,10 +9,9 @@ public class ProductManagement {
 
     static void display(ArrayList<Product> al) {
         System.out.println("\n--------------Product List---------------\n");
-        System.out.printf("%-10s%-15s%-10s%-20s%n", "ID","Name","Brand","amount");
-        for(Product e : al)
-        {
-            System.out.printf("%-5s%-20s%-10s%-15s%n",e.productID,e.productname,e.amount,e.brand);
+        System.out.printf("%-10s%-15s%-10s%-20s%n", "ID", "Name", "Brand", "amount");
+        for (Product e : al) {
+            System.out.printf("%-5s%-20s%-10s%-15s%n", e.productID, e.productname, e.amount, e.brand);
         }
     }
 
@@ -93,7 +92,7 @@ public class ProductManagement {
                     productID = sc.next();
                     int j = 0;
                     for (Product e : al) {
-                        if (productID.equals( e.productID)) {
+                        if (productID.equals(e.productID)) {
                             j++;
                             do {
                                 int ch1 = 0;
@@ -156,7 +155,7 @@ public class ProductManagement {
                     int k = 0;
                     try {
                         for (Product e : al) {
-                            if (productID.equals( e.productID)) {
+                            if (productID.equals(e.productID)) {
                                 al.remove(e);
                                 display(al);
                                 k++;

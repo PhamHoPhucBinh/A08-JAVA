@@ -1,6 +1,8 @@
 package _my_CaseStudy.controllers;
 
 
+import _my_CaseStudy.person.Employee;
+
 import java.util.Scanner;
 
 public class FuramaController {
@@ -15,9 +17,10 @@ public class FuramaController {
             ch = sc.nextInt();
             switch (ch) {
                 case 1:
-                    System.out.println("\nEnter your choice :\n1.Display list employees \n2.Add new employees \n3.Edit employees \n4.Return Main menu \n");
+                    System.out.println("\nEnter your choice :\n1.Display list employees \n2.Add new employees \n3.Edit employees \n4.Delete employees \n5.Return Main menu \n");
                     ch2 = sc.nextInt();
 //                    Hotel.features(ch2);
+
                     break;
                 case 2:
                     System.out.println("\nEnter your choice :\n1.Display list customer \n2.Add new customer \n3.Edit customer \n4.Return to Mainmenu\n");
