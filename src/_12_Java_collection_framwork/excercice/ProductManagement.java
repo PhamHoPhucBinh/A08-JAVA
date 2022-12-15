@@ -113,7 +113,7 @@ public class ProductManagement {
 
                                     case 2:
                                         System.out.println("Enter new Product Name:");
-                                        e.productname = sc.nextLine();
+                                        e.productname = sc.next();
                                         System.out.println(e + "\n");
                                         break;
 
