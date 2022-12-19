@@ -35,9 +35,10 @@ class Employee implements Serializable{
 
 }
 
-public class EmployeeManagement
+public class EmployeeManagement implements ManagementInterface
 {
-    static void display(ArrayList<Employee> al)
+    //todo: arrayList al = new ArrayList<Employee>();
+    public void display(ArrayList<Employee> al)
     {
         System.out.println("\n--------------Employee List---------------\n");
         System.out.println(String.format("%-10s%-15s%-10s%-20s%-10s", "ID","Name","salary","contact-no","Email-Id"));
@@ -47,7 +48,8 @@ public class EmployeeManagement
         }
     }
 
-    @SuppressWarnings("unchecked")
+    //TODO: CustomerManagement the same way as EmployeeManangement
+
     public static void main(String[] args)
     {
         int id;
@@ -58,6 +60,9 @@ public class EmployeeManagement
 
         Scanner sc = new Scanner(System.in);
         ArrayList<Employee> al = new ArrayList<Employee>();
+        EmployeeManagement employeeService = new EmployeeManagement();
+        //CustomerManagement customerService = new CustomerMangement();
+        //employeeService.display = customerService.display
 
         File f = null;
         FileInputStream fis = null;
@@ -104,7 +109,7 @@ public class EmployeeManagement
                     System.out.println("Enter Email-ID :");
                     email_id = sc.next();
                     al.add(new Employee(id, name, salary, contact_no, email_id));
-                    display(al);
+                    employeeService.display(al);
                     break;
 
                 case 2: System.out.println("Enter the Employee ID to search :");
@@ -151,7 +156,7 @@ public class EmployeeManagement
                                         break;
 
                                     case 2: System.out.println("Enter new Employee Name:");
-                                        e.name =sc.nextLine();
+                                        e.name =sc.next();
                                         System.out.println(e+"\n");
                                         break;
 
@@ -197,7 +202,7 @@ public class EmployeeManagement
                             if(id == e.id)
                             {
                                 al.remove(e);
-                                display(al);
+                                employeeService.display(al);
                                 k++;
                             }
                         }
@@ -221,7 +226,7 @@ public class EmployeeManagement
 
                     System.out.println(e2);
                 }
-                    display(al);
+                    employeeService.display(al);
                     break;
 
                 case 6: try {
@@ -257,5 +262,4 @@ public class EmployeeManagement
         }
         while(true);
     }
-
 }

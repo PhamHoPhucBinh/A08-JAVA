@@ -1,20 +1,17 @@
-package _my_CaseStudy.controllers;
-
-
-import _CaseStudySample.EmployeeManagement;
-import _my_CaseStudy.person.Employee;
+package QuanLiXe.BangDieuKhien;
 
 import java.util.Scanner;
 
-public class FuramaController {
+public class BangDieuKhien {
     public static void main(String[] args) {
+        System.out.println("CHƯƠNG TRÌNH QUẢN LÝ PHƯƠNG TIỆN GIAO THÔNG");
         Scanner sc = new Scanner(System.in);
         int ch, ch2;
         char wish;
         x:
         do {
 
-            System.out.println("\nEnter your choice :\n1.Employee Management \n2.Customer Management \n3.Facility Management \n4.Booking Management \n5.Promotion Management \n6.Exit\n");
+            System.out.println("\nChọn chức năng: :\n1.Thêm mới phương tiện. \n2.Hiện thị phương tiện \n3.Xóa phương tiện \n4.Tìm kiếm theo biển kiểm soát \n5.Thoát\n");
             ch = sc.nextInt();
             switch (ch) {
                 case 1:
@@ -43,22 +40,21 @@ public class FuramaController {
                     ch2 = sc.nextInt();
 //                    Hotel.bookroom(ch2);
                     break;
-                case 6:break x;
+                case 6:
+                    break x;
             }
             System.out.println("\nContinue : (y/n)");
-            wish=sc.next().charAt(0);
-            if(!(wish=='y'||wish=='Y'||wish=='n'||wish=='N'))
-            {
+            wish = sc.next().charAt(0);
+            if (!(wish == 'y' || wish == 'Y' || wish == 'n' || wish == 'N')) {
                 System.out.println("Invalid Option");
                 System.out.println("\nContinue : (y/n)");
-                wish=sc.next().charAt(0);}
+                wish = sc.next().charAt(0);
+            }
         }
-        while (wish=='y'||wish=='Y'); {
+        while (wish == 'y' || wish == 'Y');
+        {
             System.out.println("Not a valid input");
         }
     }
 
-    //EmployeeManagement.main();
-    //CustomerManagement.main();
-    //StudentManagement.main();
 }

@@ -9,6 +9,9 @@ public class mainTest {
         shapes[0].resize(100);
         shapes[1].resize(100);
 
+        for (Shape x: shapes){
+            System.out.println(x);
+        }
         Shape.printShape(shapes);
 
     }
