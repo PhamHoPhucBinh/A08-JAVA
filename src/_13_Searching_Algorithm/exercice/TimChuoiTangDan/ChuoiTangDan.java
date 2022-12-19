@@ -13,7 +13,6 @@ public class ChuoiTangDan {
 
         for (int i = 0; i < inputString.length();i++){
             LinkedList<Character> list = new LinkedList<>();
-
             list.add(inputString.charAt(i));
             for (int j = i+1;j<inputString.length();j++){
                 if (inputString.charAt(j)>list.getLast()){
