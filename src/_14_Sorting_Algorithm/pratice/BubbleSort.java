@@ -1,4 +1,4 @@
-package _014_Sorting_Algorithm.pratice;
+package _14_Sorting_Algorithm.pratice;
 
 public class BubbleSort {
     static int[] list = {9, 5, -1, 5, 8, 134, -12, 77};

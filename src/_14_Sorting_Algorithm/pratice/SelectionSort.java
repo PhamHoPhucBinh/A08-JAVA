@@ -1,4 +1,4 @@
-package _014_Sorting_Algorithm.pratice;
+package _14_Sorting_Algorithm.pratice;
 
 import java.util.Arrays;
 

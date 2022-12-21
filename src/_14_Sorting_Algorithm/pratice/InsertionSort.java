@@ -1,4 +1,4 @@
-package _014_Sorting_Algorithm.pratice;
+package _14_Sorting_Algorithm.pratice;
 
 public class InsertionSort {
     public static void insertionSort(int[] array) {

@@ -1,9 +1,9 @@
-package _014_Sorting_Algorithm.pratice;
+package _14_Sorting_Algorithm.pratice;
 
 import java.util.Scanner;
 
-import static _014_Sorting_Algorithm.pratice.BubbleSort.bubbleSort;
-import static _014_Sorting_Algorithm.pratice.InsertionSort.insertionSort;
+import static _14_Sorting_Algorithm.pratice.BubbleSort.bubbleSort;
+import static _14_Sorting_Algorithm.pratice.InsertionSort.insertionSort;
 
 public class SortTest {
     public static void main(String[] args) {
