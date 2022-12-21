@@ -1,15 +1,17 @@
 package QuanLiXe.object;
 
 
+import com.sun.xml.internal.bind.v2.TODO;
+
 public abstract class PhuongTien {
     String BienKiemSoat;
-    Object HangSanXuat;
+    HangSanXuat hangSanXuat;
     int NamSanXuat;
     String ChuSoHuu;
 
     public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
         BienKiemSoat = bienKiemSoat;
-        HangSanXuat = tenHangSanXuat;
+        HangSanXuat = hangSanXuat;
         NamSanXuat = namSanXuat;
         ChuSoHuu = chuSoHuu;
     }
@@ -30,24 +32,12 @@ public abstract class PhuongTien {
         ChuSoHuu = chuSoHuu;
     }
 
-    public abstract String getBienKiemSoat();
-
-    public abstract String getHangSanXuat();
-
-    public abstract int getNamSanXuat();
-
-    public abstract String getChuSoHuu();
+    public abstract void showThongTin();
 
     public String toString() {
         return "\nThông Tin Phương Tiện :" + "\nBiển Kiểm Soát: " + this.BienKiemSoat
                 + "\nTên Hãng SX: " + this.HangSanXuat + "\nNăm SX: " +
                 this.NamSanXuat + "\nChủ Sở Hữu: " + this.ChuSoHuu;
-    }
-
-    public class HangSanXuat{
-        String maHangSanXuat;
-        String tenHangSanXuat;
-        String quocGia;
     }
 }
 

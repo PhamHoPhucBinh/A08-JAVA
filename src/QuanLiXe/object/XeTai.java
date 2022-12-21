@@ -1,38 +1,28 @@
 package QuanLiXe.object;
 
 public class XeTai extends PhuongTien{
-    float TrongTai;
+    int TrongTai;
 
-    public XeTai(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu, float trongTai) {
+    public XeTai(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu, int trongTai) {
         super(bienKiemSoat, tenHangSanXuat, namSanXuat, chuSoHuu);
         TrongTai = trongTai;
     }
 
-    public float getTrongTai() {
+    public int getTrongTai() {
         return TrongTai;
     }
 
-    public void setTrongTai(float trongTai) {
+    public void setTrongTai(int trongTai) {
         TrongTai = trongTai;
     }
 
     @Override
-    public String getBienKiemSoat() {
-        return BienKiemSoat;
+    public int getThuocTinhRieng(){
+        return getTrongTai();
     }
 
-    @Override
-    public String getHangSanXuat() {
-        return HangSanXuat;
-    }
 
-    @Override
-    public int getNamSanXuat() {
-        return NamSanXuat;
-    }
 
-    @Override
-    public String getChuSoHuu() {
-        return ChuSoHuu;
-    }
+
+
 }

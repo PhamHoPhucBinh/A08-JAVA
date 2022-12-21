@@ -14,6 +14,12 @@ class XeOtO extends PhuongTien {
         KieuXe = kieuXe;
     }
 
+
+    public int getThuocTinhRieng() {
+        return getSoChoNgoi();
+
+    }
+
     public int getSoChoNgoi() {
         return SoChoNgoi;
     }
@@ -30,28 +36,9 @@ class XeOtO extends PhuongTien {
         KieuXe = kieuXe;
     }
 
-    @Override
-    public String getBienKiemSoat() {
-        return BienKiemSoat;
+
+    enum kieuXe {
+        DuLich,
+        XeKhach
     }
-
-//    @Override
-//    public String getHangSanXuat() {
-//        return HangSanXuat;
-//    }
-
-    @Override
-    public int getNamSanXuat() {
-        return NamSanXuat;
-    }
-
-    @Override
-    public String getChuSoHuu() {
-        return ChuSoHuu;
-    }
-}
-
-enum kieuXe {
-    DuLich,
-    XeKhach
 }

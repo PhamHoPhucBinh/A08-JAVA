@@ -3,40 +3,22 @@ package QuanLiXe.object;
 import java.util.ArrayList;
 import java.util.List;
 
-public class XeMay extends PhuongTien{
-    float CongSuat;
+public class XeMay extends PhuongTien {
+    int congSuat;
     public XeMay(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
         super(bienKiemSoat, tenHangSanXuat, namSanXuat, chuSoHuu);
     }
 
-    public float getCongSuat() {
-        return CongSuat;
+    public int getCongSuat() {
+        return congSuat;
     }
 
-    public void setCongSuat(float congSuat) {
-        CongSuat = congSuat;
-    }
-
-    @Override
-    public String getBienKiemSoat() {
-        return BienKiemSoat;
-    }
-
-//    @Override
-//    public String getHangSanXuat() {
-//        return HangSanXuat;
-//    }
-
-    @Override
-    public int getNamSanXuat() {
-        return NamSanXuat;
+    public void setCongSuat(int congSuat) {
+        this.congSuat = congSuat;
     }
 
     @Override
-    public String getChuSoHuu() {
-        return ChuSoHuu;
+    public void showThongTin(){
+        System.out.println("");
     }
-
-    List<XeMay> XeMayList = new ArrayList<>();
 }
-
