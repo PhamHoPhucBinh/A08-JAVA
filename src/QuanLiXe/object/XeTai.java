@@ -22,8 +22,8 @@ public class XeTai extends PhuongTien{
     }
 
     @Override
-    public String getTenHangSanXuat() {
-        return TenHangSanXuat;
+    public String getHangSanXuat() {
+        return HangSanXuat;
     }
 
     @Override

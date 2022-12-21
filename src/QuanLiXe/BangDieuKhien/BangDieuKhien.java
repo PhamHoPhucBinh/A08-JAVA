@@ -15,9 +15,12 @@ public class BangDieuKhien {
             ch = sc.nextInt();
             switch (ch) {
                 case 1:
-                    System.out.println("\nEnter your choice :\n1.Display list employees \n2.Add new employees \n3.Edit employees \n4.Delete employees \n5.Return Main menu \n");
+                    System.out.println("\nChọn chức năng :\n1.Thêm Xe Tải \n2.Thêm Xe Ô tô \n3.Thêm Xe Máy \n4.Return Main menu \n");
                     ch2 = sc.nextInt();
-//                    Hotel.features(ch2);
+                    switch (ch2){
+                        case 1 :
+                            System.out.println("");
+                    }
 
                     break;
                 case 2:

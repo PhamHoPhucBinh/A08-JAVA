@@ -1,5 +1,8 @@
 package QuanLiXe.object;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class XeMay extends PhuongTien{
     float CongSuat;
     public XeMay(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
@@ -19,10 +22,10 @@ public class XeMay extends PhuongTien{
         return BienKiemSoat;
     }
 
-    @Override
-    public String getTenHangSanXuat() {
-        return TenHangSanXuat;
-    }
+//    @Override
+//    public String getHangSanXuat() {
+//        return HangSanXuat;
+//    }
 
     @Override
     public int getNamSanXuat() {
@@ -33,4 +36,7 @@ public class XeMay extends PhuongTien{
     public String getChuSoHuu() {
         return ChuSoHuu;
     }
+
+    List<XeMay> XeMayList = new ArrayList<>();
 }
+

@@ -35,10 +35,10 @@ class XeOtO extends PhuongTien {
         return BienKiemSoat;
     }
 
-    @Override
-    public String getTenHangSanXuat() {
-        return TenHangSanXuat;
-    }
+//    @Override
+//    public String getHangSanXuat() {
+//        return HangSanXuat;
+//    }
 
     @Override
     public int getNamSanXuat() {

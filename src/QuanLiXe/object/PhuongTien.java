@@ -3,13 +3,13 @@ package QuanLiXe.object;
 
 public abstract class PhuongTien {
     String BienKiemSoat;
-    String TenHangSanXuat;
+    Object HangSanXuat;
     int NamSanXuat;
     String ChuSoHuu;
 
     public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
         BienKiemSoat = bienKiemSoat;
-        TenHangSanXuat = tenHangSanXuat;
+        HangSanXuat = tenHangSanXuat;
         NamSanXuat = namSanXuat;
         ChuSoHuu = chuSoHuu;
     }
@@ -18,8 +18,8 @@ public abstract class PhuongTien {
         BienKiemSoat = bienKiemSoat;
     }
 
-    public void setTenHangSanXuat(String tenHangSanXuat) {
-        TenHangSanXuat = tenHangSanXuat;
+    public void setHangSanXuat(String hangSanXuat) {
+        HangSanXuat = hangSanXuat;
     }
 
     public void setNamSanXuat(int namSanXuat) {
@@ -32,10 +32,22 @@ public abstract class PhuongTien {
 
     public abstract String getBienKiemSoat();
 
-    public abstract String getTenHangSanXuat();
+    public abstract String getHangSanXuat();
 
     public abstract int getNamSanXuat();
 
     public abstract String getChuSoHuu();
+
+    public String toString() {
+        return "\nThông Tin Phương Tiện :" + "\nBiển Kiểm Soát: " + this.BienKiemSoat
+                + "\nTên Hãng SX: " + this.HangSanXuat + "\nNăm SX: " +
+                this.NamSanXuat + "\nChủ Sở Hữu: " + this.ChuSoHuu;
+    }
+
+    public class HangSanXuat{
+        String maHangSanXuat;
+        String tenHangSanXuat;
+        String quocGia;
+    }
 }
 
