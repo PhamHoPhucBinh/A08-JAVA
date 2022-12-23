@@ -1,27 +1,25 @@
-package QuanLiXe.object;
+package QuanLiXe.model;
 
-
-import com.sun.xml.internal.bind.v2.TODO;
 
 public abstract class PhuongTien {
-    String BienKiemSoat;
+    private String BienKiemSoat;
+    private int NamSanXuat;
+    private String ChuSoHuu;
     HangSanXuat hangSanXuat;
-    int NamSanXuat;
-    String ChuSoHuu;
 
-    public PhuongTien(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
+    public PhuongTien(String bienKiemSoat, int namSanXuat, String chuSoHuu, HangSanXuat hangSanXuat) {
         BienKiemSoat = bienKiemSoat;
-        HangSanXuat = hangSanXuat;
         NamSanXuat = namSanXuat;
         ChuSoHuu = chuSoHuu;
+        this.hangSanXuat = hangSanXuat;
     }
 
     public void setBienKiemSoat(String bienKiemSoat) {
         BienKiemSoat = bienKiemSoat;
     }
 
-    public void setHangSanXuat(String hangSanXuat) {
-        HangSanXuat = hangSanXuat;
+    public void setcodeHSX(String codeHSX) {
+        codeHSX = codeHSX;
     }
 
     public void setNamSanXuat(int namSanXuat) {
@@ -32,12 +30,21 @@ public abstract class PhuongTien {
         ChuSoHuu = chuSoHuu;
     }
 
+    public HangSanXuat getHangSanXuat() {
+        return hangSanXuat;
+    }
+
+    public void setHangSanXuat(HangSanXuat hangSanXuat) {
+        this.hangSanXuat = hangSanXuat;
+    }
+
     public abstract void showThongTin();
 
     public String toString() {
         return "\nThông Tin Phương Tiện :" + "\nBiển Kiểm Soát: " + this.BienKiemSoat
-                + "\nTên Hãng SX: " + this.HangSanXuat + "\nNăm SX: " +
+                + "\nTên Hãng SX: " + this.hangSanXuat.getTenHSX() + "\nNăm SX: " +
                 this.NamSanXuat + "\nChủ Sở Hữu: " + this.ChuSoHuu;
     }
+
 }
 

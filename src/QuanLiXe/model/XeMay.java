@@ -1,13 +1,12 @@
-package QuanLiXe.object;
-
-import java.util.ArrayList;
-import java.util.List;
+package QuanLiXe.model;
 
 public class XeMay extends PhuongTien {
     int congSuat;
-    public XeMay(String bienKiemSoat, String tenHangSanXuat, int namSanXuat, String chuSoHuu) {
-        super(bienKiemSoat, tenHangSanXuat, namSanXuat, chuSoHuu);
+
+    public XeMay(String bienKiemSoat, int namSanXuat, String chuSoHuu, HangSanXuat hangSanXuat) {
+        super(bienKiemSoat, namSanXuat, chuSoHuu, hangSanXuat);
     }
+
 
     public int getCongSuat() {
         return congSuat;
@@ -21,4 +20,6 @@ public class XeMay extends PhuongTien {
     public void showThongTin(){
         System.out.println("");
     }
+
+
 }

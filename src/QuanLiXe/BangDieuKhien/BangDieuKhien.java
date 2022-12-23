@@ -1,8 +1,14 @@
 package QuanLiXe.BangDieuKhien;
 
+import QuanLiXe.model.XeMay;
+import QuanLiXe.service.XeMayService;
+import QuanLiXe.service.XeMayServiceImpl;
+
 import java.util.Scanner;
 
 public class BangDieuKhien {
+    private static XeMayService xeMayService = new XeMayServiceImpl();
+
     public static void main(String[] args) {
         System.out.println("CHƯƠNG TRÌNH QUẢN LÝ PHƯƠNG TIỆN GIAO THÔNG");
         Scanner sc = new Scanner(System.in);
@@ -41,6 +47,7 @@ public class BangDieuKhien {
                 case 5:
                     System.out.println("\nPromotion Management :\n1.Display list customers use service \n2.Display list customers get voucher \n3.Return main menu\n");
                     ch2 = sc.nextInt();
+                  XeMay xeMay = xeMayService.findAll().get(0);
 //                    Hotel.bookroom(ch2);
                     break;
                 case 6:
