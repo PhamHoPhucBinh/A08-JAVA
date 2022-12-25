@@ -25,32 +25,31 @@ public class BangDieuKhien {
                     ch2 = sc.nextInt();
                     switch (ch2){
                         case 1 :
+                            ch2 = sc.nextInt();
                             System.out.println("");
-                    }
+                            break ;
+                        case 2:
+                            ch2 = sc.nextInt();
+                            System.out.println();
 
+                    }
                     break;
                 case 2:
-                    System.out.println("\nEnter your choice :\n1.Display list customer \n2.Add new customer \n3.Edit customer \n4.Return to Mainmenu\n");
+                    System.out.println("\nEnter your choice :\n1.Hiển thị Danh Sách xe tải \n2.Hiển thị Danh Sách xe Ô tô \n3.Hiển thị Danh Sách xe máy \n4.Return to Mainmenu\n");
                     ch2 = sc.nextInt();
 //                    Hotel.availability(ch2);
                     break;
                 case 3:
-                    System.out.println("\nEnter your choice :\n1.Display list facility \n2.Add new facility \n3.Display list facility maintenance\n4.Return main menu\n");
+                    System.out.println("\nXóa Theo Biển Kiểm Soát :\n1.Xóa Xe tải \n2.Xóa xe Ô tô \n3.Xóa xe máy\n4.Return main menu\n");
                     ch2 = sc.nextInt();
 //                    Hotel.bookroom(ch2);
                     break;
                 case 4:
-                    System.out.println("\nEnter your choice :\n1.Add new booking \n2.Display list booking \n3.Create new constract \n4.Display list contract \n5.Edit contracts \n6.Return main menu \n");
-                    ch2 = sc.nextInt();
-//                    Hotel.bookroom(ch2);
-                    break;
-                case 5:
-                    System.out.println("\nPromotion Management :\n1.Display list customers use service \n2.Display list customers get voucher \n3.Return main menu\n");
+                    System.out.println("\nTìm Thông Tin xe theo Biển Kiểm Soát :\n1.Tìm Thông tin Xe Tải \n2.Tìm Thông tin Xe Ô tô \n3.Tìm Thông tin Xe Máy \n4.Return main menu \n");
                     ch2 = sc.nextInt();
                   XeMay xeMay = xeMayService.findAll().get(0);
-//                    Hotel.bookroom(ch2);
                     break;
-                case 6:
+                case 5:
                     break x;
             }
             System.out.println("\nContinue : (y/n)");
