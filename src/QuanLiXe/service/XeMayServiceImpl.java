@@ -24,7 +24,7 @@ public class XeMayServiceImpl implements XeMayService{
     }
 
     @Override
-    public void delete(String bienSoXe) {
+    public void delete(XeMay xeMay) {
 
     }
 
@@ -33,8 +33,4 @@ public class XeMayServiceImpl implements XeMayService{
         return null;
     }
 
-    @Override
-    public void abc() {
-
-    }
 }

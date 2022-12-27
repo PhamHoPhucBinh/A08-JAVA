@@ -13,6 +13,14 @@ public class HangSanXuatService {
         hangSanXuats.add(new HangSanXuat("YM", "Yamaha", "Korea"));
     }
 
+    public HangSanXuat getHangSanXuat() {
+        return hangSanXuats.get(0);
+    }
+
+    public void setHangSanXuats(ArrayList<HangSanXuat> hangSanXuats) {
+        this.hangSanXuats = hangSanXuats;
+    }
+
     public List<HangSanXuat> findAll(){
         return hangSanXuats;
     }
