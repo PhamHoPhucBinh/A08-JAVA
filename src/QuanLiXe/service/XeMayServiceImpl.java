@@ -1,36 +1,35 @@
 package QuanLiXe.service;
 
+import QuanLiXe.model.HangSanXuat;
 import QuanLiXe.model.XeMay;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class XeMayServiceImpl implements XeMayService{
-    private List<XeMay> xeMays = new ArrayList<>();
-
-    @Override
-    public List<XeMay> findAll() {
-        return xeMays;
+    private ArrayList<XeMay> xeMays = new ArrayList<>();
+    public XeMayServiceImpl(){
+        xeMays.add(new XeMay("43A12345",2015,"Phúc Bình",new HangSanXuat("PI","Piaggio","Italia"),150));
     }
-
     @Override
     public void create(XeMay xeMay) {
-        xeMays.add(xeMay);
     }
-
     @Override
-    public void edit(XeMay xeMay) {
-
+     public void hienThiXeMay(ArrayList<XeMay> xeMays) {
+        System.out.println("\n--------------Danh sách xe Máy---------------\n");
+        System.out.println(String.format("%-10s%-15s%-10s%-20s%-10s", "BKS","Chủ Xe","NSX","HSX","CS"));
+        for(XeMay e : xeMays) {
+            System.out.println(String.format("%-5s%-20s%-10s%-15s%-10s",e.getBienKiemSoat(),e.getChuSoHuu(),e.getNamSanXuat(),e.getHangSanXuat(),e.getCongSuat()));
+        }
     }
-
     @Override
-    public void delete(XeMay xeMay) {
-
-    }
-
-    @Override
-    public List<XeMay> search(String bienSoXe) {
+    public XeMay timXeMay(String bienKiemSoat) {
         return null;
     }
-
+    @Override
+    public void themXeMay() {
+    }
+    @Override
+    public void updateXeMay() {
+    }
 }

@@ -42,8 +42,7 @@ public class EmployeeManagement implements ManagementInterface
     {
         System.out.println("\n--------------Employee List---------------\n");
         System.out.println(String.format("%-10s%-15s%-10s%-20s%-10s", "ID","Name","salary","contact-no","Email-Id"));
-        for(Employee e : al)
-        {
+        for(Employee e : al) {
             System.out.println(String.format("%-5s%-20s%-10s%-15s%-10s",e.id,e.name,e.salary,e.contact_no,e.email_id));
         }
     }

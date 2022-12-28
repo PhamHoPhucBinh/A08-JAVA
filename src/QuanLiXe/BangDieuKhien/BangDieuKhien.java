@@ -1,78 +1,116 @@
 package QuanLiXe.BangDieuKhien;
 
+import QuanLiXe.model.HangSanXuat;
 import QuanLiXe.model.XeMay;
 import QuanLiXe.model.XeTai;
 import QuanLiXe.service.HangSanXuatService;
 import QuanLiXe.service.XeMayService;
 import QuanLiXe.service.XeMayServiceImpl;
+import _12_Java_collection_framwork.excercice.Product;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BangDieuKhien {
+    ArrayList<XeMay> xeMays = new ArrayList<XeMay>();
 
-    public static void main(String[] args) {
-         XeMayService xeMayService = new XeMayServiceImpl();
-         HangSanXuatService hangSanXuatService = new HangSanXuatService();
 
-         XeMay xeMay1 = new XeMay("43A12345",2005,"Binh",hangSanXuatService.getHangSanXuat(),150  );
-        System.out.println("CHƯƠNG TRÌNH QUẢN LÝ PHƯƠNG TIỆN GIAO THÔNG");
-        Scanner sc = new Scanner(System.in);
-        int ch, ch2;
-        char wish;
-        x:
+    String bienKiemSoat;
+    int namSanXuat;
+    String chuSoHuu;
+    HangSanXuat hangSanXuat;
+    int inputCongSuat;
+
+    private XeMayServiceImpl xeMayService = new XeMayServiceImpl();
+
+    public void hienthiMenu() {
+        boolean flag = true;
         do {
+            System.out.println("CHƯƠNG TRÌNH QUẢN LÝ PHƯƠNG TIỆN GIAO THÔNG ");
+            System.out.println("Chọn chức năng : " +
+                    "\n 1. Hiện thị phương tiện." +
+                    "\n 2. Thêm mới phương tiện." +
+                    "\n 3. Xóa phương tiện." +
+                    "\n 4. Tìm kiếm theo biển kiểm soát" +
+                    "\n 5. Thoát. ");
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Chọn chức năng");
+            int choose = Integer.parseInt(scanner.nextLine());
 
-            System.out.println("\nChọn chức năng: :\n1.Thêm mới phương tiện. \n2.Hiện thị phương tiện \n3.Xóa phương tiện \n4.Tìm kiếm theo biển kiểm soát \n5.Thoát\n");
-            ch = sc.nextInt();
-            switch (ch) {
+            switch (choose) {
                 case 1:
-                    System.out.println("\nChọn chức năng :\n1.Thêm Xe Tải \n2.Thêm Xe Ô tô \n3.Thêm Xe Máy \n4.Return Main menu \n");
-                    ch2 = sc.nextInt();
-                    switch (ch2){
-                        case 1 :
-                            ch2 = sc.nextInt();
+                    // code display
 
-
-                            break ;
+                    int choose2 = 0;
+                    System.out.println("chức năng hiện thị");
+                    System.out.println("chọn loại xe : " +
+                            "\n 1. Xe Máy. " +
+                            "\n 2. Xe Ô tô." +
+                            "\n 3. Xe Tải." +
+                            "\n 4. Trở lại menu trước.");
+                    choose2 = scanner.nextInt();
+                    switch (choose2) {
+                        case 1:
+                            xeMayService.hienThiXeMay(xeMays);
+                            break;
                         case 2:
-                            ch2 = sc.nextInt();
-                            System.out.println();
+//                            XeOToServiceImpl.hienThiXeOTo(xeOTos);
                         case 3:
-                            ch2 = sc.nextInt();
-                            xeMayService.create(xeMay1);
-
+//                            XeTaiServiceImpl.hienThiXeTai(xeTais);
+                        case 4:
+                            break;
                     }
+
                     break;
                 case 2:
-                    System.out.println("\nEnter your choice :\n1.Hiển thị Danh Sách xe tải \n2.Hiển thị Danh Sách xe Ô tô \n3.Hiển thị Danh Sách xe máy \n4.Return to Mainmenu\n");
-                    ch2 = sc.nextInt();
-//                    Hotel.availability(ch2);
+                    // code thêm mới
+
+                    System.out.println("Chức năng thêm xe mới");
+                    System.out.println("chọn loại xe : " +
+                            "\n 1. Xe Máy. " +
+                            "\n 2. Xe Ô tô." +
+                            "\n 3. Xe Tải." +
+                            "\n 4. Trở lại menu trước.");
+                    choose2 = scanner.nextInt();
+                    switch (choose2) {
+                        case 1:
+                            System.out.println("\nNhập các thông tin tạo xe Máy :\n");
+                            System.out.println("Nhập Biển Số :");
+                            bienKiemSoat = scanner.next();
+                            System.out.println("Nhập tên chủ xe :");
+                            chuSoHuu = scanner.next();
+                            System.out.println("Nhập Năm Sản Xuất :");
+                            namSanXuat = scanner.nextInt();
+                            System.out.println("Chọn Hãng Sản Xuất :");
+                            //nhập choose để chọn hãng trong list
+                            System.out.println("Nhập Công Suất  :");
+                            inputCongSuat = scanner.nextInt();
+
+                            xeMays.add(new XeMay(bienKiemSoat, namSanXuat, chuSoHuu, hangSanXuat, inputCongSuat));
+                            xeMayService.hienThiXeMay(xeMays);
+                            break;
+                        case 2:
+
+                    }
+
                     break;
                 case 3:
-                    System.out.println("\nXóa Theo Biển Kiểm Soát :\n1.Xóa Xe tải \n2.Xóa xe Ô tô \n3.Xóa xe máy\n4.Return main menu\n");
-                    ch2 = sc.nextInt();
-//                    Hotel.bookroom(ch2);
+                    // code xóa
+                    System.out.println("chức năng xóa");
+
                     break;
                 case 4:
-                    System.out.println("\nTìm Thông Tin xe theo Biển Kiểm Soát :\n1.Tìm Thông tin Xe Tải \n2.Tìm Thông tin Xe Ô tô \n3.Tìm Thông tin Xe Máy \n4.Return main menu \n");
-                    ch2 = sc.nextInt();
-//                  XeMay xeMay = xeMayService.findAll().get(0);
+                    // code sửa
+                    System.out.println("chức năng sửa");
+
                     break;
                 case 5:
-                    break x;
+                    // code tìm kiếm
+                    System.out.println("chức năng tìm kiếm");
+                    break;
+                default:
+                    flag = false;
             }
-            System.out.println("\nContinue : (y/n)");
-            wish = sc.next().charAt(0);
-            if (!(wish == 'y' || wish == 'Y' || wish == 'n' || wish == 'N')) {
-                System.out.println("Invalid Option");
-                System.out.println("\nContinue : (y/n)");
-                wish = sc.next().charAt(0);
-            }
-        }
-        while (wish == 'y' || wish == 'Y');
-        {
-            System.out.println("Not a valid input");
-        }
+        } while (flag);
     }
-
 }

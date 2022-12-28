@@ -14,6 +14,18 @@ public abstract class PhuongTien {
         this.hangSanXuat = hangSanXuat;
     }
 
+    public String getBienKiemSoat() {
+        return BienKiemSoat;
+    }
+
+    public int getNamSanXuat() {
+        return NamSanXuat;
+    }
+
+    public String getChuSoHuu() {
+        return ChuSoHuu;
+    }
+
     public void setBienKiemSoat(String bienKiemSoat) {
         BienKiemSoat = bienKiemSoat;
     }
