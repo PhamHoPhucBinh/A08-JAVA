@@ -12,8 +12,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class BangDieuKhien {
-    ArrayList<XeMay> xeMays = new ArrayList<XeMay>();
-
 
     String bienKiemSoat;
     int namSanXuat;
@@ -51,7 +49,7 @@ public class BangDieuKhien {
                     choose2 = scanner.nextInt();
                     switch (choose2) {
                         case 1:
-                            xeMayService.hienThiXeMay(xeMays);
+                            xeMayService.hienThiXeMay();
                             break;
                         case 2:
 //                            XeOToServiceImpl.hienThiXeOTo(xeOTos);
@@ -86,8 +84,7 @@ public class BangDieuKhien {
                             System.out.println("Nhập Công Suất  :");
                             inputCongSuat = scanner.nextInt();
 
-                            xeMays.add(new XeMay(bienKiemSoat, namSanXuat, chuSoHuu, hangSanXuat, inputCongSuat));
-                            xeMayService.hienThiXeMay(xeMays);
+                            xeMayService.hienThiXeMay();
                             break;
                         case 2:
 

@@ -24,7 +24,7 @@ public class XeMay extends PhuongTien {
 
     public String toString()
     {
-        return "\nThông tin Xe Máy :" + "\nBiển Kiểm Soát: " + this.getBienKiemSoat() + "\nNChủ Sở Hữu: " + this.getChuSoHuu() + "\nNăm Sản Xuất: " +
+        return "\nThông tin Xe Máy :" + "\nBiển Kiểm Soát: " + super.BienKiemSoat + "\nNChủ Sở Hữu: " + this.getChuSoHuu() + "\nNăm Sản Xuất: " +
                 this.getNamSanXuat() + "\nHãng Sản Xuất: " + this.getHangSanXuat() + "\nCông Suất " + this.congSuat;
     }
 }

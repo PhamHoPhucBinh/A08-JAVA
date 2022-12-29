@@ -5,8 +5,10 @@ public class HangSanXuat {
     private String tenHSX;
     private String quocGia;
 
-    public HangSanXuat(){
-
+    public HangSanXuat(String codeHSX, String tenHSX, String quocGia) {
+        this.codeHSX = codeHSX;
+        this.tenHSX = tenHSX;
+        this.quocGia = quocGia;
     }
 
     public String getCodeHSX() {
@@ -18,7 +20,7 @@ public class HangSanXuat {
     }
 
     public String getTenHSX() {
-        return tenHSX;
+        return this.tenHSX;
     }
 
     public void setTenHSX(String tenHSX) {
@@ -33,10 +35,7 @@ public class HangSanXuat {
         this.quocGia = quocGia;
     }
 
-    public HangSanXuat(String codeHSX, String tenHSX, String quocGia) {
-        this.codeHSX = codeHSX;
-        this.tenHSX = tenHSX;
-        this.quocGia = quocGia;
-    }
+
+
 
 }

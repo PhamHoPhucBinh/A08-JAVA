@@ -2,7 +2,7 @@ package QuanLiXe.model;
 
 
 public abstract class PhuongTien {
-    private String BienKiemSoat;
+    protected String BienKiemSoat;
     private int NamSanXuat;
     private String ChuSoHuu;
     HangSanXuat hangSanXuat;

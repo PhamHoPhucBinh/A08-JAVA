@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public interface XeMayService extends PhuongTienService<XeMay>{
 
-    void hienThiXeMay(ArrayList<XeMay> xeMays);
+    void hienThiXeMay();
 
     XeMay timXeMay(String bienKiemSoat);
 
