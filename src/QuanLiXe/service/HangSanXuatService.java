@@ -10,6 +10,8 @@ public class HangSanXuatService  {
     public HangSanXuatService(){
         hangSanXuats.add(new HangSanXuat("HD","Honda", "Japan"));
         hangSanXuats.add(new HangSanXuat("YM", "Yamaha", "Korea"));
+        hangSanXuats.add(new HangSanXuat("PI","Piaggio","Italia"));
+
     }
 
     public HangSanXuat getHangSanXuatMau() {

@@ -46,7 +46,8 @@ public class ProductManagement {
 //        }
         do {
             System.out.println("\n*********Welcome to the Product Management System**********\n");
-            System.out.println("1). Add Product to the DataBase\n" +
+            System.out.println(
+                    "1). Add Product to the DataBase\n" +
                     "2). Search for Product\n" +
                     "3). Edit Product details\n" +
                     "4). Delete Product Details\n" +

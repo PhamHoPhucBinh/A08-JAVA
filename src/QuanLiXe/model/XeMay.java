@@ -1,7 +1,8 @@
 package QuanLiXe.model;
 
 public class XeMay extends PhuongTien {
-    int congSuat;
+
+    public  int congSuat;
 
     public XeMay(String bienKiemSoat, int namSanXuat, String chuSoHuu, HangSanXuat hangSanXuat, int inputCongSuat) {
         super(bienKiemSoat, namSanXuat, chuSoHuu, hangSanXuat);

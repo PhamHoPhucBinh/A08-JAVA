@@ -2,10 +2,11 @@ package QuanLiXe.model;
 
 
 public abstract class PhuongTien {
-    protected String BienKiemSoat;
-    private int NamSanXuat;
-    private String ChuSoHuu;
-    HangSanXuat hangSanXuat;
+    public String BienKiemSoat;
+
+    public int NamSanXuat;
+    public String ChuSoHuu;
+    public HangSanXuat hangSanXuat;
 
     public PhuongTien(String bienKiemSoat, int namSanXuat, String chuSoHuu, HangSanXuat hangSanXuat) {
         BienKiemSoat = bienKiemSoat;

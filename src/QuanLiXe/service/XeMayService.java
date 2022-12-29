@@ -14,4 +14,6 @@ public interface XeMayService extends PhuongTienService<XeMay>{
 
     void updateXeMay();
 
+    void xoaXeMay();
+
 }
