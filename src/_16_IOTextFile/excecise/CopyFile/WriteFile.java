@@ -13,6 +13,7 @@ public class WriteFile {
                 BufferedWriter writer = new BufferedWriter(new FileWriter("outputdocs.txt"));
                 writer.write("content1");
                 writer.write("\ncontent2");
+                writer.write("test");
                 for (String data : datas) {
                     writer.write("\n" + data);
                 }
@@ -23,3 +24,4 @@ public class WriteFile {
         }
     }
 }
+
