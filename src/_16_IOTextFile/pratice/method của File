@@ -1,0 +1,19 @@
+1. Tạo một đối tượng File đại diện cho một file đang tồn tại:  
+
+File f = new File("foo.txt");
+2. Tạo một thư mục mới:  
+
+File dir = new File("Books"); dir.mkdir();  
+3. Liệt kê nội dung của một thư mục:  
+
+if (dir.isDirectory()) { 
+   String[] dirContents = dir.list();
+   for (int i = 0; i < dirContents; i++)  
+      System.out.println(dirContents[i]);
+}
+4. Lấy đường dẫn tuyệt đối của file hoặc thư mục:  
+
+System.out.println(dir.getAbsolutePath());
+5. Xóa file hoặc thư mục (trả về true nếu thành công):  
+
+boolean isDeleted = f.delete();
