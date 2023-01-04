@@ -560,7 +560,6 @@ public class Main {
                             System.out.println("Room doesn't exist");
                         break;
                     case 6:break x;
-
                 }
 
                 System.out.println("\nContinue : (y/n)");
