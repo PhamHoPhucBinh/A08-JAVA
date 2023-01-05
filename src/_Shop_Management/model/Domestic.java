@@ -26,6 +26,7 @@ public class Domestic extends Product {
 
     @Override
     public String getInfoToCSV() {
-        return this.warrantyPeriod+ "," + super.getInfoToCSV();
+        return super.getInfoToCSV() + "," + this.warrantyPeriod;
+
     }
 }

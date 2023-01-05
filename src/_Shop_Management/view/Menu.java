@@ -1,8 +1,11 @@
 package _Shop_Management.view;
+
 import _Shop_Management.model.Domestic;
+import _Shop_Management.model.IDGenerator;
 import _Shop_Management.model.Imported;
 import _Shop_Management.model.Product;
 import _Shop_Management.service.DomesticService;
+import _Shop_Management.service.IDGenerater;
 import _Shop_Management.service.ImportedService;
 import _Shop_Management.service.ProductService;
 import _Shop_Management.util.ConstantUtil;
@@ -11,6 +14,8 @@ import _Shop_Management.util.ReadWriteCSV;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
+import static _Shop_Management.service.DomesticService.domesticArrayList;
 
 public class Menu {
     private static Scanner scanner = new Scanner(System.in);
@@ -22,7 +27,6 @@ public class Menu {
         System.out.printf("Enter your choice:");
         return Integer.parseInt(scanner.nextLine());
     }
-
 
 
     public void DisplayMenu() {
@@ -99,7 +103,7 @@ public class Menu {
             }
             case 2: {
                 System.out.println("\n--------------Imported Product List---------------\n");
-                System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", "ID", "Name", "Price", "Manufacturer", "Country","Status"));
+                System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", "ID", "Name", "Price", "Manufacturer", "Country", "Status"));
                 List<Imported> importedList = importedService.findAll();
                 for (Imported e : importedList) {
                     System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", e.getProductID(), e.getProductName(), e.getPrice(), e.getManufacturer(), e.getCountry(), e.getProductStatus()));
@@ -119,11 +123,9 @@ public class Menu {
         System.out.println("1. Domestic Product \n2. Imported Product \n3. Back ");
         int choice = getChoice();
 
-        System.out.printf("Product ID:");
-        String productID = scanner.nextLine();
 
-//        productID.generate();
-
+        IDGenerator generator = new IDGenerator();
+        generator.init("A", "Z", 0);
 
         System.out.printf("Product Name:");
         String productName = scanner.nextLine();
@@ -141,20 +143,25 @@ public class Menu {
                 System.out.printf("Warranty Period:");
                 String warrantyPeriod = scanner.nextLine();
 
-                Domestic domestic = new Domestic(productID, productName, price, manufacturer, warrantyPeriod);
-                domesticService.create(domestic);
-
-                ReadWriteCSV.writeCSV("src/_Shop_Management/data/DOMESTIC_FILE.csv",DomesticService.domesticArrayList,true);
+                for (int i = 0; i < domesticArrayList.size()-1; i += 1) {
+                    String productID;
+                    productID = generator.generate();
+                    Domestic domestic = new Domestic(productID, productName, price, manufacturer, warrantyPeriod);
+                    domesticService.create(domestic);
+                    ReadWriteCSV.writeCSV("src/_Shop_Management/data/DOMESTIC_FILE.csv", domesticArrayList, true);
+                }
                 break;
             }
             case 2: {
+
                 System.out.printf("Country:");
                 String country = scanner.nextLine();
                 System.out.printf("Product Status:");
                 String productStatus = scanner.nextLine();
 
-                Imported imported = new Imported(productID, productName, price, manufacturer, country, ConstantUtil.ProductStatus.valueOf(productStatus));
-                importedService.create(imported);
+
+//                Imported imported = new Imported(productID, productName, price, manufacturer, country, ConstantUtil.ProductStatus.valueOf(productStatus));
+//                importedService.create(imported);
 
                 break;
             }

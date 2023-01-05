@@ -64,8 +64,9 @@ public abstract class Product {
 
 
     }
-    public String getInfoToCSV(){
-        return this.productID+","+this.productName  +","+this.price+","+this.manufacturer;
+
+    public String getInfoToCSV() {
+        return this.productID + "," + this.productName + "," + this.price + "," + this.manufacturer;
     }
 }
 
