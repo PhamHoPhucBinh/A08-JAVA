@@ -8,12 +8,15 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class DomesticService implements ProductService<Domestic> {
-    private ArrayList<Domestic> domesticArrayList = new ArrayList<>();
+
+    private final String DOMESTIC_FILE = "src/_Shop_Management/data/DOMESTIC.CSV";
+    public static ArrayList<Domestic> domesticArrayList = new ArrayList<>();
     public List<Domestic> findAll(){
         return domesticArrayList;
     }
     public void create(Domestic domestic) {
         domesticArrayList.add(domestic);
+
     }
 
     public boolean findByID(String productID) {

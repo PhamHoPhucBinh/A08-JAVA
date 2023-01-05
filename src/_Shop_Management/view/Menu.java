@@ -6,8 +6,7 @@ import _Shop_Management.service.DomesticService;
 import _Shop_Management.service.ImportedService;
 import _Shop_Management.service.ProductService;
 import _Shop_Management.util.ConstantUtil;
-import productID.GenerateId;
-//import _Shop_Management.util.IdGenerator;
+import _Shop_Management.util.ReadWriteCSV;
 
 import java.util.List;
 import java.util.Random;
@@ -91,6 +90,7 @@ public class Menu {
             case 1: {
                 System.out.println("\n--------------Domestic Product List---------------\n");
                 System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", "ID", "Name", "Price", "Manufacturer", "Warranty"));
+//                List<Domestic> domesticList = ReadWriteCSV.readDomesticProductFromCSV("src/_Shop_Management/data/DOMESTIC_FILE.csv");
                 List<Domestic> domesticList = domesticService.findAll();
                 for (Domestic e : domesticList) {
                     System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", e.getProductID(), e.getProductName(), e.getPrice(), e.getManufacturer(), e.getWarrantyPeriod()));
@@ -143,6 +143,8 @@ public class Menu {
 
                 Domestic domestic = new Domestic(productID, productName, price, manufacturer, warrantyPeriod);
                 domesticService.create(domestic);
+
+                ReadWriteCSV.writeCSV("src/_Shop_Management/data/DOMESTIC_FILE.csv",DomesticService.domesticArrayList,true);
                 break;
             }
             case 2: {
@@ -153,6 +155,7 @@ public class Menu {
 
                 Imported imported = new Imported(productID, productName, price, manufacturer, country, ConstantUtil.ProductStatus.valueOf(productStatus));
                 importedService.create(imported);
+
                 break;
             }
             case 3: {
@@ -175,7 +178,7 @@ public class Menu {
         } else if (importedService.findByID(productID)) {
             deleteWithConfirm(importedService, productID);
         } else {
-            System.out.println("No exists driver plate");
+            System.out.println("No exists this ID !!!");
         }
     }
 

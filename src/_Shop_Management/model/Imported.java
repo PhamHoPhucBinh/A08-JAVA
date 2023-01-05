@@ -37,4 +37,7 @@ public class Imported extends Product {
         return "Country : " + country +
                 "\nproductStatus : " + productStatus + super.toString();
     }
+    public String getInfoToCSV() {
+        return this.country+ "," + this.productStatus+ "," + super.getInfoToCSV();
+    }
 }

@@ -2,9 +2,10 @@ package _Shop_Management.model;
 
 import _Shop_Management.service.IDGenerater;
 
+import java.util.Comparator;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public abstract class Product  {
+public abstract class Product {
     private String productID;
     private String productName;
     private Double price;
@@ -63,6 +64,9 @@ public abstract class Product  {
 
 
     }
-
-
+    public String getInfoToCSV(){
+        return this.productID+","+this.productName  +","+this.price+","+this.manufacturer;
+    }
 }
+
+
