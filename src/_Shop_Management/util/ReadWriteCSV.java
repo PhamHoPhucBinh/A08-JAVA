@@ -1,5 +1,6 @@
 package _Shop_Management.util;
 import _Shop_Management.model.Domestic;
+import _Shop_Management.model.Imported;
 import _Shop_Management.model.Product;
 import ss9_mvc.model.Student;
 
@@ -26,7 +27,7 @@ public class ReadWriteCSV {
 //    }
 
 
-    public static void writeCSV(String pathFile, List<Domestic> domesticList, boolean append) {
+    public static void writeDomesticCSV(String pathFile, List<Domestic> domesticList, boolean append) {
         File file = new File(pathFile);
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
@@ -69,4 +70,21 @@ public class ReadWriteCSV {
         return domesticList;
     }
 
+    public static void writeImportedCSV(String pathFile, ArrayList<Imported> importedArrayList, boolean append) {
+        File file = new File(pathFile);
+        FileWriter fileWriter = null;
+        BufferedWriter bufferedWriter = null;
+        try {
+            fileWriter = new FileWriter(file, append);
+            bufferedWriter = new BufferedWriter(fileWriter);
+            for (Imported i   : importedArrayList) {
+                bufferedWriter.write(i.getInfoToCSV());
+                bufferedWriter.newLine();
+            }
+            bufferedWriter.close();
+            fileWriter.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

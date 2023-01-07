@@ -16,6 +16,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 import static _Shop_Management.service.DomesticService.domesticArrayList;
+import static _Shop_Management.service.ImportedService.importedArrayList;
 
 public class Menu {
     private static Scanner scanner = new Scanner(System.in);
@@ -125,7 +126,7 @@ public class Menu {
 
 
         IDGenerator generator = new IDGenerator();
-        generator.init("A", "Z", 0);
+//        generator.init("A", "Z", 0);
 
         System.out.printf("Product Name:");
         String productName = scanner.nextLine();
@@ -142,14 +143,19 @@ public class Menu {
             case 1: {
                 System.out.printf("Warranty Period:");
                 String warrantyPeriod = scanner.nextLine();
-
-                for (int i = 0; i < domesticArrayList.size()-1; i += 1) {
-                    String productID;
-                    productID = generator.generate();
-                    Domestic domestic = new Domestic(productID, productName, price, manufacturer, warrantyPeriod);
-                    domesticService.create(domestic);
-                    ReadWriteCSV.writeCSV("src/_Shop_Management/data/DOMESTIC_FILE.csv", domesticArrayList, true);
+                String previousID;
+                if (domesticArrayList.size() > 0) {
+                    Domestic domesticLast = domesticArrayList.get(domesticArrayList.size() - 1);
+                    int tmp = Integer.parseInt(domesticLast.getProductID().replace(ConstantUtil.Prefix, "").replace(ConstantUtil.SuffixDomestic, ""));
+                    generator.init(ConstantUtil.Prefix, ConstantUtil.SuffixDomestic, tmp);
+                } else {
+                    generator.init(ConstantUtil.Prefix, ConstantUtil.SuffixDomestic, 0);
                 }
+               previousID = generator.generate();
+                Domestic domestic = new Domestic( previousID, productName, price, manufacturer, warrantyPeriod);
+                domesticService.create(domestic);
+                ReadWriteCSV.writeDomesticCSV("src/_Shop_Management/data/DOMESTIC_FILE.csv", domesticArrayList, true);
+
                 break;
             }
             case 2: {
@@ -159,9 +165,18 @@ public class Menu {
                 System.out.printf("Product Status:");
                 String productStatus = scanner.nextLine();
 
-
-//                Imported imported = new Imported(productID, productName, price, manufacturer, country, ConstantUtil.ProductStatus.valueOf(productStatus));
-//                importedService.create(imported);
+                String previousID;
+                if (importedArrayList.size() > 0) {
+                    Imported importedLast = importedArrayList.get(importedArrayList.size() - 1);
+                    int tmp = Integer.parseInt(importedLast.getProductID().replace(ConstantUtil.Prefix, "").replace(ConstantUtil.SuffixImported, ""));
+                    generator.init(ConstantUtil.Prefix, ConstantUtil.SuffixImported, tmp);
+                } else {
+                    generator.init(ConstantUtil.Prefix, ConstantUtil.SuffixImported, 0);
+                }
+                previousID = generator.generate();
+                Imported imported = new Imported(previousID, productName, price, manufacturer, country, ConstantUtil.ProductStatus.valueOf(productStatus));
+                importedService.create(imported);
+                ReadWriteCSV.writeImportedCSV("src/_Shop_Management/data/IMPORTED_FILE.csv", importedArrayList, true);
 
                 break;
             }

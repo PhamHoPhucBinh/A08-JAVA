@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class ImportedService implements ProductService<Imported> {
-    private ArrayList<Imported> importedArrayList = new ArrayList<>();
+    public static ArrayList<Imported> importedArrayList = new ArrayList<>();
 
     public List<Imported> findAll() {
         return importedArrayList;
