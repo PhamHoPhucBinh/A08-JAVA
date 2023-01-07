@@ -77,17 +77,10 @@ public class Menu {
 
         } while (wish == 'y' || wish == 'Y');
 
-//        Thread t = new Thread(new write(Hotel.hotel_ob));
-//        t.start();
     }
-////    catch(Exception e)
-////    {
-////        System.out.println("Not a valid input");
-////
-//
-//}
 
 
+    ////DISPLAY
     public static void display() {
         System.out.println("1. Domestic Product \n2. Imported Product \n3. Back ");
         int choice = getChoice();
@@ -113,20 +106,21 @@ public class Menu {
             }
             case 3: {
                 //back to mainmenu code
-                //System.exit(0);
+                System.exit(0);
                 break;
             }
         }
     }
 
 
+    ///ADD
     public static void add() {
         System.out.println("1. Domestic Product \n2. Imported Product \n3. Back ");
         int choice = getChoice();
 
 
         IDGenerator generator = new IDGenerator();
-//        generator.init("A", "Z", 0);
+
 
         System.out.printf("Product Name:");
         String productName = scanner.nextLine();
@@ -151,8 +145,8 @@ public class Menu {
                 } else {
                     generator.init(ConstantUtil.Prefix, ConstantUtil.SuffixDomestic, 0);
                 }
-               previousID = generator.generate();
-                Domestic domestic = new Domestic( previousID, productName, price, manufacturer, warrantyPeriod);
+                previousID = generator.generate();
+                Domestic domestic = new Domestic(previousID, productName, price, manufacturer, warrantyPeriod);
                 domesticService.create(domestic);
                 ReadWriteCSV.writeDomesticCSV("src/_Shop_Management/data/DOMESTIC_FILE.csv", domesticArrayList, true);
 
@@ -163,7 +157,15 @@ public class Menu {
                 System.out.printf("Country:");
                 String country = scanner.nextLine();
                 System.out.printf("Product Status:");
+                System.out.println("Type the status below : preparing / shipping / arrived");
                 String productStatus = scanner.nextLine();
+
+//                String productStatus;
+//                do {
+//                    productStatus = scanner.nextLine();
+//                } while (productStatus.matches("prepraring") || productStatus.matches("shipping") || productStatus.matches("arrived"));
+//
+//                System.out.println("invalid input,pls re-type !!");
 
                 String previousID;
                 if (importedArrayList.size() > 0) {
@@ -181,7 +183,7 @@ public class Menu {
                 break;
             }
             case 3: {
-                //back code
+                System.exit(0);
                 break;
             }
         }
@@ -192,15 +194,19 @@ public class Menu {
 
     /////DEL
     private static void delete() {
-        System.out.printf("Enter product ID to delete:");
-        String productID = scanner.nextLine();
+        try {
+            System.out.printf("Enter product ID to delete:");
+            String productID = scanner.nextLine();
 
-        if (domesticService.findByID(productID)) {
-            deleteWithConfirm(domesticService, productID);
-        } else if (importedService.findByID(productID)) {
-            deleteWithConfirm(importedService, productID);
-        } else {
-            System.out.println("No exists this ID !!!");
+            if (domesticService.findByID(productID)) {
+                deleteWithConfirm(domesticService, productID);
+            } else if (importedService.findByID(productID)) {
+                deleteWithConfirm(importedService, productID);
+            } else {
+                System.out.println("No exists this ID !!!");
+            }
+        } catch (Exception e) {
+            System.out.println(e);
         }
     }
 

@@ -100,6 +100,7 @@ public class MainMenu {
         String plate = scanner.nextLine();
 
         System.out.println("--- List Manufacturer ---");
+
         ManufacturerServices manufactureService = new ManufacturerServices();
         List<Manufacturer> manufacturerList = manufactureService.findAll();
         for (int i = 0; i < manufacturerList.size(); i++) {
