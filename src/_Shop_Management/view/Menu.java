@@ -86,13 +86,15 @@ public class Menu {
         int choice = getChoice();
         switch (choice) {
             case 1: {
-                System.out.println("\n--------------Domestic Product List---------------\n");
-                System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", "ID", "Name", "Price", "Manufacturer", "Warranty"));
+//                System.out.println("\n--------------Domestic Product List---------------\n");
+//                System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", "ID", "Name", "Price", "Manufacturer", "Warranty"));
+                domesticService.displayDomesticProduct();
 //                List<Domestic> domesticList = ReadWriteCSV.readDomesticProductFromCSV("src/_Shop_Management/data/DOMESTIC_FILE.csv");
-                List<Domestic> domesticList = domesticService.findAll();
-                for (Domestic e : domesticList) {
-                    System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", e.getProductID(), e.getProductName(), e.getPrice(), e.getManufacturer(), e.getWarrantyPeriod()));
-                }
+
+//                List<Domestic> domesticList = domesticService.findAll();
+//                for (Domestic e : domesticList) {
+//                    System.out.println(String.format("%-15s%-20s%-10s%-15s%-10s", e.getProductID(), e.getProductName(), e.getPrice(), e.getManufacturer(), e.getWarrantyPeriod()));
+//                }
                 break;
             }
             case 2: {
