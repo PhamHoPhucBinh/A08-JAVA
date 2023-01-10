@@ -1,5 +1,4 @@
-package model;
-
+package vehicle_manager.VehicleManager_p1_collection.src.model;
 import util.ConstantUtil.TypeOfCar;
 
 public class Car extends Vehicle{

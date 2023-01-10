@@ -1,4 +1,4 @@
-package service;
+package vehicle_manager.VehicleManager_p1_collection.src.service;
 
 import model.Manufacturer;
 

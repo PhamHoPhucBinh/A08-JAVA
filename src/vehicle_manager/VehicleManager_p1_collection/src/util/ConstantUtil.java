@@ -1,4 +1,4 @@
-package util;
+package vehicle_manager.VehicleManager_p1_collection.src.util;
 
 import model.Manufacturer;
 

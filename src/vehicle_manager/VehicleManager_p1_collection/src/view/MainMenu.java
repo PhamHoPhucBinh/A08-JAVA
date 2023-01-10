@@ -1,8 +1,8 @@
-package view;
-
-import model.*;
-import service.*;
+package vehicle_manager.VehicleManager_p1_collection.src.view;
 import util.ConstantUtil;
+import vehicle_manager.VehicleManager_p1_collection.src.service.CarService;
+import vehicle_manager.VehicleManager_p1_collection.src.service.MotorService;
+import vehicle_manager.VehicleManager_p1_collection.src.service.TruckService;
 
 import java.util.List;
 import java.util.Scanner;
@@ -20,11 +20,16 @@ public class MainMenu {
             int choice = getChoice();
 
             switch (choice) {
-                case 1 -> add();
-                case 2 -> display();
-                case 3 -> delete();
-                case 4 -> search();
-                case 5 -> System.exit(0);
+                case 1 : add();
+                break;
+                case 2 : display();
+                break;
+                case 3 :delete();
+                break;
+                case 4 :search();
+                break;
+                case 5 :System.exit(0);
+                break;
             }
         }
     }

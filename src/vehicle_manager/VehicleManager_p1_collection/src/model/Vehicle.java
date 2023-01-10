@@ -1,4 +1,4 @@
-package model;
+package vehicle_manager.VehicleManager_p1_collection.src.model;
 
 public abstract class Vehicle {
     private String driverPlate;

@@ -1,8 +1,10 @@
-package model;
+package vehicle_manager.VehicleManager_p2_file.src.model;
 
 import util.ConstantUtil.TypeOfCar;
+import vehicle_manager.VehicleManager_p1_collection.src.model.Manufacturer;
+import vehicle_manager.VehicleManager_p1_collection.src.model.Vehicle;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle {
     private int numberOfSeat;
 
     private TypeOfCar typeOfCar;
