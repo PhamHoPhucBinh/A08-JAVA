@@ -3,7 +3,7 @@ package _11_DSA_Stack_Queue.pratice.LinkedList;
 import java.util.EmptyStackException;
 import java.util.LinkedList;
 
-import static javafx.beans.binding.Bindings.isEmpty;
+
 
 public class MyGenericStack<T> {
     private LinkedList<T> stack;

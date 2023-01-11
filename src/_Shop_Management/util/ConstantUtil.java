@@ -1,6 +1,6 @@
 package _Shop_Management.util;
 
-import static javafx.scene.input.KeyCode.P;
+
 
 public interface ConstantUtil {
     String Prefix = "P";

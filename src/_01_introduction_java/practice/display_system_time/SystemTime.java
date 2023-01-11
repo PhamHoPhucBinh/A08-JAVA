@@ -1,6 +1,5 @@
 package _01_introduction_java.practice.display_system_time;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 import java.util.Date;
 import java.util.Scanner;

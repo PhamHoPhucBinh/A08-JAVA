@@ -1,6 +1,5 @@
 package _01_introduction_java.practice.using_variable;
 
-import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 public class using_variable {
 

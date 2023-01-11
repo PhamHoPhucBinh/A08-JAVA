@@ -2,7 +2,6 @@ package _Shop_Management.service;
 
 import _Shop_Management.model.Domestic;
 import _Shop_Management.util.ReadWriteCSV;
-import _Vehicle_management.model.Moto;
 import ss9_mvc.model.Student;
 import ss9_mvc.util.ReadAndWrite;
 
