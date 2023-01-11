@@ -10,23 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ReadWriteCSV {
-//    public static void writeCSV(String pathFile, List<Product> productList,boolean append) {
-//        File file = new File(pathFile);
-//        FileWriter fileWriter = null;
-//        BufferedWriter bufferedWriter = null;
-//        try {
-//            fileWriter = new FileWriter(file, append);
-//            bufferedWriter = new BufferedWriter(fileWriter);
-//            for (Product p : productList) {
-//                bufferedWriter.write(p.getInfoToCSV());
-//                bufferedWriter.newLine();
-//            }
-//            bufferedWriter.close();
-//            fileWriter.close();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
 
     public static void writeDomesticCSV(String pathFile, List<Domestic> domesticList, boolean append) {
