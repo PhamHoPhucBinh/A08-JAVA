@@ -29,7 +29,7 @@ public class VillaService {
         return rooms;
     }
 
-    public List<House> getAllMotor() {
+    public List<House> getAllHouse() {
         return houses;
     }
 
@@ -42,9 +42,10 @@ public class VillaService {
             fileHouse.write(ConstantUltilities.FilePath.House, houses, false);
         }
     }
+
     //FIND
     public boolean findById(String id) {
-        return Stream.of(rooms,houses).flatMap(Collection::stream).anyMatch(e -> e.getId().equals(id));
+        return Stream.of(rooms, houses).flatMap(Collection::stream).anyMatch(e -> e.getId().equals(id));
     }
 
     //DELETE
@@ -73,15 +74,34 @@ public class VillaService {
         for (String line : lines) {
             String[] tmp = line.split(",");
             String id = tmp[0];
-            Double area = tmp[1];
-            Double price = tmp[2];
-            String owner = tmp[3];
-            int numberSeat = Integer.parseInt(tmp[4]);
-            String typeCar = tmp[5];
-           House house = new House();
-            res.add(car);
+            Double area = Double.parseDouble(tmp[1]);
+            Double price = Double.parseDouble(tmp[2]);
+            int maxPeople = Integer.parseInt(tmp[3]);
+            String contract = tmp[4];
+            String standard = tmp[5];
+            int numOfFloor = Integer.parseInt(tmp[6]);
+            House house = new House(id, area, price, maxPeople, contract, standard, numOfFloor);
+            res.add(house);
         }
+        return res;
+    }
 
+    private List<Room> toRooms() {
+        List<Room> res = new ArrayList<>();
+        List<String> lines = fileRoom.read(ConstantUltilities.FilePath.Room);
+
+        for (String line : lines) {
+            String[] tmp = line.split(",");
+            String id = tmp[0];
+            Double area = Double.parseDouble(tmp[1]);
+            Double price = Double.parseDouble(tmp[2]);
+            int maxPeople = Integer.parseInt(tmp[3]);
+            String contract = tmp[4];
+            String freeService = tmp[5];
+            Room room = new Room(id, area, price, maxPeople, contract, freeService);
+            res.add(room);
+        }
         return res;
     }
 }
+
