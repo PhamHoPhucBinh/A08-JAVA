@@ -22,13 +22,6 @@ public class Room extends Villa {
 
     @Override
     public String toString() {
-        return "Room{" +
-                "freeService='" + freeService + '\'' +
-                ", id='" + id + '\'' +
-                ", area=" + area +
-                ", price=" + price +
-                ", maxPeople=" + maxPeople +
-                ", Contract='" + Contract + '\'' +
-                '}';
+        return String.format("%s,%s",super.toString(),freeService) ;
     }
 }

@@ -496,7 +496,6 @@ class write implements Runnable
 ///tao cai menu luc dau
 public class Main {
     public static void main(String[] args){
-
         try
         {
             File f = new File("backup");

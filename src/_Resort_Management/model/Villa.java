@@ -60,12 +60,6 @@ public abstract class Villa {
 
     @Override
     public String toString() {
-        return "Villa{" +
-                "id='" + id + '\'' +
-                ", area=" + area +
-                ", price=" + price +
-                ", maxPeople=" + maxPeople +
-                ", Contract='" + Contract + '\'' +
-                '}';
+        return String.format("%s,%s,%s,%s,%s",id,area,price,maxPeople,Contract);
     }
 }

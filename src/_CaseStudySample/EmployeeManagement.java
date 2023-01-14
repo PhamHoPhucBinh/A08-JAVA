@@ -69,7 +69,6 @@ public class EmployeeManagement implements ManagementInterface
         FileOutputStream fos = null;
         ObjectOutputStream oos =null;
         try{
-
             f = new File("N:/Java Work Space/Eclipse Programs/Employee Management Tool/src/EmployeeDataList1.txt");
             if(f.exists())
             {
@@ -247,7 +246,6 @@ public class EmployeeManagement implements ManagementInterface
                     } catch (Exception e1) {
                         e1.printStackTrace();
                     }
-
                 }
                     System.out.println("\nYou have chosen EXIT !! Saving Files and closing the tool.");
                     sc.close();
@@ -256,7 +254,6 @@ public class EmployeeManagement implements ManagementInterface
 
                 default : System.out.println("\nEnter a correct choice from the List :");
                     break;
-
             }
         }
         while(true);

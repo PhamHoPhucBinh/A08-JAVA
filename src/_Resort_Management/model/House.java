@@ -33,14 +33,6 @@ public class House extends Villa {
 
     @Override
     public String toString() {
-        return "House{" +
-                "standard='" + standard + '\'' +
-                ", numOfFloor=" + numOfFloor +
-                ", id='" + id + '\'' +
-                ", area=" + area +
-                ", price=" + price +
-                ", maxPeople=" + maxPeople +
-                ", Contract='" + Contract + '\'' +
-                '}';
+        return String.format("%s,%s,%s",super.toString(),standard,numOfFloor);
     }
 }

@@ -6,7 +6,6 @@ import _Resort_Management.Ultility.FileHelper;
 import _Resort_Management.model.House;
 import _Resort_Management.model.Room;
 import _Resort_Management.model.Villa;
-import util.ConstantUtil;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -80,6 +79,8 @@ public class VillaService {
             String contract = tmp[4];
             String standard = tmp[5];
             int numOfFloor = Integer.parseInt(tmp[6]);
+
+
             House house = new House(id, area, price, maxPeople, contract, standard, numOfFloor);
             res.add(house);
         }
