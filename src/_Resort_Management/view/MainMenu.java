@@ -86,7 +86,7 @@ public class MainMenu {
     private static String getIdWithoutExists() {
         String id = null;
         do {
-            id = inputWithOutEmpty(id != null ? "ID existed . Please input again:" : "Driver plate");
+            id = inputWithOutEmpty(id != null ? "ID existed . Please input again:" : "Room / House ID");
         } while (villaService.findById(id));
         return id;
     }
