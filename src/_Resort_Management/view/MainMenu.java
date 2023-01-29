@@ -9,7 +9,6 @@ import _Resort_Management.service.VillaService;
 
 import java.util.List;
 import java.util.Scanner;
-
 import static _Resort_Management.Ultility.CommonUltility.*;
 
 public class MainMenu {
