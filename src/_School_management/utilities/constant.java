@@ -2,8 +2,8 @@ package _School_management.utilities;
 
 public interface constant {
     interface FilePath{
-        String Student = "src/_School_management/data/Student.csv";
-        String Teacher = "src/_School_management/data/Teacher.csv";
+        String Student = "_School_management/data/Student.csv";
+        String Teacher = "_School_management/data/Teacher.csv";
     }
     interface IDRegex {
         String ID_student = "^[S]\\d+$";
@@ -14,10 +14,5 @@ public interface constant {
     }
     interface NameRegex{
         String name_format = "^(([A-Z]{1}[a-z]+)( )?){1,}$";
-    }
-    enum Certification{
-        College,
-        University,
-        Master
     }
 }

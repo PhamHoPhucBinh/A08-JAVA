@@ -1,4 +1,5 @@
 package _School_management.model;
+import _School_management.utilities.constant;
 
 public class Teacher extends Human{
     String certification;
@@ -33,4 +34,5 @@ public class Teacher extends Human{
     public String toString() {
         return String.format("%s,%s,%s",super.toString(),certification,salary) ;
     }
+
 }

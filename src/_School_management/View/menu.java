@@ -3,10 +3,12 @@ package _School_management.View;
 import _School_management.Exception.NotFoundHumanID;
 import _School_management.model.*;
 import _School_management.service.*;
+import _School_management.utilities.constant;
 import _School_management.utilities.constant.*;
 import _School_management.utilities.validation;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 
@@ -59,12 +61,14 @@ public class menu {
     }
 
     private static void displayStudent(List<Student> students) {
+        humanService.sortByStudentName();
         if (students.size() > 0) {
             System.out.printf("%-20s %-20s %-30s %20s %n", "Student ID", "Name", "Birthday", "ID number", "Class ID");
             System.out.println("-------------------------------------------------------------------------------------------------------------------------");
 
             for (Student s : students) {
                 System.out.printf("%-20s %-20s %-30s %20s %n", s.getId(), s.getName(), s.getBirthday(), s.getIdentityNumber(), s.getClassID());
+
             }
         } else {
             System.out.println("Empty list...");
@@ -72,6 +76,7 @@ public class menu {
     }
 
     private static void displayTeacher(List<Teacher> teachers) {
+
         if (teachers.size() > 0) {
             System.out.printf("%-20s %-20s %-30s %-20s %20s %n", "Teacher ID", "Name", "Birthday", "ID number", "Certification", "Salary");
             System.out.println("-------------------------------------------------------------------------------------------------------------------------");
@@ -82,6 +87,7 @@ public class menu {
         } else {
             System.out.println("Empty list...");
         }
+//        humanService.sortByTeacherName();
     }
 
     private static void add() {
@@ -118,6 +124,7 @@ public class menu {
                 human = new Student(id, name, birthday, identityNumber, classID);
                 break;
             case 2:
+                System.out.println("College,University,Master");
                 String certification = inputWithOutEmpty("input certification");
                 Double salary = inputToDouble("Teacher's salary");
                 human = new Teacher(id, name, birthday, identityNumber, certification, salary);
@@ -170,4 +177,5 @@ public class menu {
             });
         }
     }
+
 }
