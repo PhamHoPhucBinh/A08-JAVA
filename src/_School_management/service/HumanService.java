@@ -7,7 +7,7 @@ import _School_management.model.Human;
 import _School_management.model.Student;
 import _School_management.model.Teacher;
 import _School_management.utilities.FileHelper;
-
+import _School_management.utilities.constant.Certification;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -90,7 +90,7 @@ public class HumanService {
             int identityNumber = Integer.parseInt(tmp[3]);
             String certification = tmp[4];
             Double salary = Double.parseDouble(tmp[5]);
-            Teacher teacher = new Teacher(id,name,birthday,identityNumber,certification,salary);
+            Teacher teacher = new Teacher(id,name,birthday,identityNumber,Certification.valueOf(certification),salary);
             res.add(teacher);
         }
         return res;

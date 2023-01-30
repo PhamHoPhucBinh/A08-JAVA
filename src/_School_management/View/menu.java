@@ -102,6 +102,9 @@ public class menu {
                 }
         }
         String name = inputWithOutEmpty("input Name");
+        while (!validation.isName(name)) {
+            name = inputWithOutEmpty("Invalid format. Please input again");
+        }
         String birthday = inputWithOutEmpty("input allow form xx-yy-zzzz");
         while (!validation.isBirthday(birthday)) {
             birthday = inputWithOutEmpty("Invalid format. Please input again");

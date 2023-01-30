@@ -12,4 +12,12 @@ public interface constant {
     interface BirthdayRegex {
         String birthday_format = "^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[012])-((19|2[0-9])[0-9]{2})$";
     }
+    interface NameRegex{
+        String name_format = "^(([A-Z]{1}[a-z]+)( )?){1,}$";
+    }
+    enum Certification{
+        College,
+        University,
+        Master
+    }
 }
