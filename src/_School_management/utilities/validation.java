@@ -18,5 +18,5 @@ public class validation {
     public static boolean isName(String name) {
         return name.matches(NameRegex.name_format);
     }
-
+    public static boolean isCertification(String certification){return certification.matches(CertificationRegex.certification_format);}
 }

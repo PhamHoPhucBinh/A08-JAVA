@@ -2,8 +2,8 @@ package _School_management.utilities;
 
 public interface constant {
     interface FilePath{
-        String Student = "_School_management/data/Student.csv";
-        String Teacher = "_School_management/data/Teacher.csv";
+        String Student = "D:\\CodegymA06\\JAVA\\A08-JAVA\\src\\_School_management\\data\\Student.csv";
+        String Teacher = "D:\\CodegymA06\\JAVA\\A08-JAVA\\src\\_School_management\\data\\Teacher.csv";
     }
     interface IDRegex {
         String ID_student = "^[S]\\d+$";
@@ -14,5 +14,8 @@ public interface constant {
     }
     interface NameRegex{
         String name_format = "^(([A-Z]{1}[a-z]+)( )?){1,}$";
+    }
+    interface CertificationRegex{
+        String certification_format = "University|Master|College";
     }
 }

@@ -126,6 +126,9 @@ public class menu {
             case 2:
                 System.out.println("College,University,Master");
                 String certification = inputWithOutEmpty("input certification");
+                while (!validation.isCertification(certification)){
+                    certification = inputWithOutEmpty("Invalid format. Please input again");
+                }
                 Double salary = inputToDouble("Teacher's salary");
                 human = new Teacher(id, name, birthday, identityNumber, certification, salary);
                 break;
